@@ -8,7 +8,7 @@ def check_long_functions(file_path, max_lines=15):
     tree = ast.parse(code)
 
     for node in ast.walk(tree):
-        # print(type(node).__name__)
+        print(type(node).__name__)
         if isinstance(node, ast.FunctionDef):
             function_name = node.name
             function_lines = node.end_lineno - node.lineno + 1
